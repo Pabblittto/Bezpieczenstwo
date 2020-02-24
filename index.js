@@ -34,9 +34,11 @@ const zad1Odszyfrowanie = function(){
     let slowo = document.getElementById("inputOdsz").value;
     let dlugosc = slowo.length;
     let N = Number.parseInt(document.getElementById("numberNOdsz").value);
-    let WYNIK = "";
+    let WYNIK = new Array(dlugosc);// tablica o odpowiedniej dlugosci
 
-    
+
+
+
 
 
 
