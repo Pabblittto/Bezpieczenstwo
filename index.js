@@ -32,12 +32,68 @@ const zad1Kodowanie = function(){
 
 const zad1Odszyfrowanie = function(){
     let slowo = document.getElementById("inputOdsz").value;
+    let tablicaZnakow = slowo.split('');
     let dlugosc = slowo.length;
     let N = Number.parseInt(document.getElementById("numberNOdsz").value);
-    let WYNIK = new Array(dlugosc);// tablica o odpowiedniej dlugosci
+    let WYNIK = ""
+
+    //pierwszy for po liczbie literek i licznik % N oznaczjący 
+    var macierz = new Array(N);// tworzymy tablice pustych tablic
+    for(let i=0;i<N;i++){
+        macierz[i]=[];
+    }
+
+    let iloscDzialow = Math.floor(dlugosc/(2*(N-1)));// ilosc lejkow 
+    let resztkaDzialu = dlugosc%(2*(N-1));// ile krateczek dzialu pozostalo
+
+    for(let i=1;i<=N;i++){// tworzenie tablic
+        let iloscLiterek=0;
+
+        if(i!=N && i!=1)
+            iloscLiterek=iloscDzialow*2;
+        else
+            iloscLiterek=iloscDzialow;
+            
+        if(resztkaDzialu!=0){
+            let resztaLiterek=0;
+            if(resztkaDzialu>((i-1)+2*(N-i)) && i!=N)
+                resztaLiterek = 2;
+            else if(resztkaDzialu>(i-1))
+                resztaLiterek = 1;
+
+            iloscLiterek+=resztaLiterek;
+        }
+
+        for(let j=0;j<iloscLiterek;j++){
+            macierz[i-1].push(tablicaZnakow.shift())
+        }
+    }
+
+    let tmpIndex=1; // index tablicy który jest brany pod uwage
+    let kierunek=false;//true oznacza dodawanie, false odejmowanie
+    do{
+        let wczytana;
+
+        wczytana=macierz[tmpIndex-1].shift();
+
+        if(tmpIndex==1)
+            kierunek=true;
+        
+        if(tmpIndex==N)
+            kierunek=false;
+
+        if(kierunek)
+            tmpIndex++;
+        else
+            tmpIndex--;
+
+        if(wczytana!=undefined)
+            WYNIK+=wczytana;
+        else
+            break;
 
 
-
+    }while(true)
 
 
 
