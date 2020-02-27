@@ -50,10 +50,53 @@ const zad2Odszyfrowanie = function(){
     let slowo = document.getElementById("inputOdszZad2").value;
     let tablicaZnakow = slowo.split('');
     let dlugosc = slowo.length;
-    let Klucz = document.getElementById("numberNOdszZad2").value
-    let dlugoscKlucza= Math.ceil(Klucz.length/2);
+    let klucz = document.getElementById("numberNOdszZad2").value
+    let dlugoscKlucza= Math.ceil(klucz.length/2);
     let WYNIK = ""
-    let macierz= new Array(dlugoscKlucza)
+    let tablicaPomocnicza= new Array(dlugoscKlucza)
+
+
+    let wartosciKlucza = new Array(); 
+    let kluczWTablicy = klucz.split('');
+    for(let k=0; k<dlugoscKlucza*2; k+=2){//wartosci klucza wsadzamy to tablicy
+        wartosciKlucza.push(Number.parseInt(kluczWTablicy[k]));
+    }
+
+    let znak;
+    let iloscWierszy = Math.ceil(dlugosc/dlugoscKlucza);
+    for(let i=0;i<iloscWierszy; i++){// zapełniamy macierz całymi wierszami
+        if(i!=iloscWierszy-1){
+            for(let j=0; j<dlugoscKlucza; j++ ){
+                tablicaPomocnicza[wartosciKlucza[j]-1] = tablicaZnakow.shift();
+            }
+
+            for(let k=0; k<dlugoscKlucza; k++){
+                znak = tablicaPomocnicza[k];
+                if(znak!=undefined)
+                    WYNIK +=znak;
+            }
+        }
+        else{
+            let iloscResztki = tablicaZnakow.length;// pokazuje ile literek zostalo
+            for(let j=0; j<dlugoscKlucza; j++ ){
+                if(wartosciKlucza[j]>iloscResztki){
+                    tablicaPomocnicza[wartosciKlucza[j]-1] = undefined;
+                    // jezeli wartosc klucza jest wieksza niz ilosc literek ktore zostały to daj undefined- bo na pewno tam zadnej literki nie bylo
+                }else{
+                    tablicaPomocnicza[wartosciKlucza[j]-1] = tablicaZnakow.shift();
+                }
+            }
+
+            for(let k=0; k<dlugoscKlucza; k++){
+                znak = tablicaPomocnicza[k];
+                if(znak!=undefined)
+                    WYNIK +=znak;
+            }
+        }
+    }
+
+    
+
 
     //mtu kod napisać
 
