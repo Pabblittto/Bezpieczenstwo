@@ -1,4 +1,4 @@
-let alphabet = "abcdefghijklmnopqrstuvwxyz";
+let alphabet = "abcdefghijklmnoprstuwyz";
 let alphabetTable = alphabet.split('');
 const literkaNaPozycji = function(literaKod,literaWiadomosc){
     let pozycjaLiterkiKodu;
