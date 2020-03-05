@@ -2,10 +2,13 @@ const zad2Kodowanie = function(){
     let slowo = document.getElementById("inputZad2").value;
     let slowoWTablicy = slowo.split('');
     let Klucz = document.getElementById("numberNZad2").value;
-    let dlugoscKlucza= Math.ceil(Klucz.length/2);
+   
     let dlugosc = slowo.length;
     let KOD="";
     let macierz= new Array(dlugoscKlucza)
+    let wartosciKlucza = Klucz.split('-') 
+    let dlugoscKlucza=wartosciKlucza.length;
+
     for(let i=0;i<dlugoscKlucza;i++){
         macierz[i]=[];
     }
@@ -18,11 +21,7 @@ const zad2Kodowanie = function(){
             wskaznik=-1;// resetowanie wskaznika
     }
     
-    let wartosciKlucza = new Array(); 
-    let kluczWTablicy = Klucz.split('');
-    for(let k=0; k<dlugoscKlucza*2; k+=2){//wartosci klucza wsadzamy to tablicy
-        wartosciKlucza.push(Number.parseInt(kluczWTablicy[k]));
-    }
+   
 
     let znak;
     wskaznik=-1;// przelatujemy przez macierz i pobieramy konkretne liteki według klucza
@@ -51,16 +50,13 @@ const zad2Odszyfrowanie = function(){
     let tablicaZnakow = slowo.split('');
     let dlugosc = slowo.length;
     let klucz = document.getElementById("numberNOdszZad2").value
-    let dlugoscKlucza= Math.ceil(klucz.length/2);
+    
     let WYNIK = ""
     let tablicaPomocnicza= new Array(dlugoscKlucza)
 
 
-    let wartosciKlucza = new Array(); 
-    let kluczWTablicy = klucz.split('');
-    for(let k=0; k<dlugoscKlucza*2; k+=2){//wartosci klucza wsadzamy to tablicy
-        wartosciKlucza.push(Number.parseInt(kluczWTablicy[k]));
-    }
+    let wartosciKlucza = klucz.split('-')
+    let dlugoscKlucza= wartosciKlucza.length;
 
     let znak;
     let iloscWierszy = Math.ceil(dlugosc/dlugoscKlucza);

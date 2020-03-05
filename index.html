@@ -55,7 +55,7 @@
         <div style="margin: 10px;">
             <label>Szyfrowanie</label>
             <input type="text" id="inputZad3" placeholder="wiadomosc"/>
-            <input type="number" id="numberNZad3" placeholder="N"/>
+            <input type="text" id="numberNZad3" placeholder="kod"/>
             <button onclick="zad3Kodowanie()">Szyfruj</button>
             <h4 id="zad3Code"></h4>
         </div>
@@ -63,10 +63,30 @@
         <div style="margin: 10px;">
             <label>Odszyfrowanie</label>
             <input type="text" id="inputOdszZad3" placeholder="wiadomosc"/>
-            <input type="number" id="numberNOdszZad3" placeholder="N"/>
-            <button onclick="zad3Odszyfrowanie()">Odszyfruj</button>
+            <input type="text" id="numberNOdszZad3" placeholder="kod"/>
+            <button onclick="zad32Odszyfrowanie()">Odszyfruj</button>
             <h4 id="zad3Result"></h4>
 
+        </div>
+    </div>
+
+    <hr/>
+    <h3>ZAD 3.2  bazuj ˛acy na przykładzie 2c</h3>
+    <div style="display: flex; align-items: stretch;">
+        <div style="margin: 10px;">
+            <label>Szyfrowanie</label>
+            <input type="text" id="inputZad32" placeholder="wiadomosc"/>
+            <input type="text" id="numberNZad32" placeholder="kod"/>
+            <button onclick="zad32Kodowanie()">Szyfruj</button>
+            <h4 id="zad32Code"></h4>
+        </div>
+
+        <div style="margin: 10px;">
+            <label>Odszyfrowanie</label>
+            <input type="text" id="inputOdszZad32" placeholder="wiadomosc"/>
+            <input type="text" id="numberNOdszZad32" placeholder="kod"/>
+            <button onclick="zad32Odszyfrowanie()">Odszyfruj</button>
+            <h4 id="zad32Result"></h4>
         </div>
     </div>
 
@@ -119,6 +139,7 @@
     <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="zad2.js"></script>
     <script type="text/javascript" src="zad3.js"></script>
+    <script type="text/javascript" src="zad32.js"></script>
     <script type="text/javascript" src="zad4.js"></script>
     
    
