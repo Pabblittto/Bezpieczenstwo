@@ -20,7 +20,7 @@ function Phi(n) {
 }
 
 function mod(n, m) {
-    return ((n % m) + m) % m;
+    return BigInt(((n % m) + m) % m);
 }
 function modulo(divident, divisor) {
     var partLength = 10;
@@ -34,14 +34,14 @@ function modulo(divident, divisor) {
 }
 
 
-// let alphabet = "abcdefghijklmnopqrstuvwxyz";
-// let alphabetTable = alphabet.split('');
+let alfabetnowy = "abcdefghijklmnoprstuwyz_śćź";
+let alfabetTablica1 = alfabetnowy.split('');
 
 
 function pozycjaLiterkiwAlfabecie(literka) {
     let pozycjaLiterki;
-    for (let i = 0; i < alphabet.length; i++) {
-        if (alphabetTable[i] == literka.toLowerCase()) {
+    for (let i = 0; i < alfabetnowy.length; i++) {
+        if (alfabetTablica1[i] == literka.toLowerCase()) {
             pozycjaLiterki = i;
         }
     }
@@ -65,7 +65,7 @@ const zad4Kodowanie = function () {
     let KOD = "";
 
     for (let i = 0; i < dlugosc; i++) {
-        KOD += alphabetTable[mod((pozycjaLiterkiwAlfabecie(slowo[i]) * K2) + K1, alphabet.length)];
+        KOD += alfabetTablica1[mod((pozycjaLiterkiwAlfabecie(slowo[i]) * K2) + K1, alfabetnowy.length)];
     }
 
     // tu kod napisać
@@ -84,11 +84,11 @@ const zad4Odszyfrowanie = function () {
     //mtu kod napisać
 
     for (let i = 0; i < dlugosc; i++) {
-        k1dofi = BigInt(potega(BigInt(K2), BigInt(Phi(alphabet.length) - 1)));
+        k1dofi = BigInt(potega(BigInt(K2), BigInt(Phi(alfabetnowy.length) - 1)));
         //console.log(BigInt(potega(BigInt(17), BigInt(21))))
-        a = BigInt(BigInt(pozycjaLiterkiwAlfabecie(slowo[i]) + (alphabet.length - K1)) * k1dofi);
-        b = BigInt(alphabet.length);
-        WYNIK += alphabetTable[modulo(a, b)];
+        a = BigInt(BigInt(pozycjaLiterkiwAlfabecie(slowo[i]) + (alfabetnowy.length - K1)) * k1dofi);
+        b = BigInt(alfabetnowy.length);
+        WYNIK += alfabetTablica1[mod(a, b)];
     }
 
     document.getElementById("zad4Result").innerHTML = WYNIK;
