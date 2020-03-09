@@ -1,148 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
 </head>
+
 <body>
     <h3>ZAD 1 Rail fence</h3>
     <div style="display: flex; align-items: stretch;">
         <div style="margin: 10px;">
             <label>Szyfrowanie</label>
-            <input type="text" id="input" placeholder="wiadomosc"/>
-            <input type="number" id="numberN" placeholder="N"/>
+            <input type="text" id="input" placeholder="wiadomosc" />
+            <input type="number" id="numberN" placeholder="N" />
             <button onclick="zad1Kodowanie()">Szyfruj</button>
             <h4 id="zad1Code"></h4>
         </div>
 
         <div style="margin: 10px;">
             <label>Odszyfrowanie</label>
-            <input type="text" id="inputOdsz" placeholder="wiadomosc"/>
-            <input type="number" id="numberNOdsz" placeholder="N"/>
+            <input type="text" id="inputOdsz" placeholder="wiadomosc" />
+            <input type="number" id="numberNOdsz" placeholder="N" />
             <button onclick="zad1Odszyfrowanie()">Odszyfruj</button>
             <h4 id="zad1Result"></h4>
 
         </div>
     </div>
 
-    <hr/>
-    <h3>ZAD 2  kryptosystem przedstawieniowy bazuj ˛acy na przykładzie 2a</h3>
+    <hr />
+    <h3>ZAD 2 kryptosystem przedstawieniowy bazuj ˛acy na przykładzie 2a</h3>
     <div style="display: flex; align-items: stretch;">
         <div style="margin: 10px;">
             <label>Szyfrowanie</label>
-            <input type="text" id="inputZad2" placeholder="wiadomosc"/>
-            <input type="text" id="numberNZad2" placeholder="Klucz( z myślnikami )"/>
+            <input type="text" id="inputZad2" placeholder="wiadomosc" />
+            <input type="text" id="numberNZad2" placeholder="Klucz( z myślnikami )" />
             <button onclick="zad2Kodowanie()">Szyfruj</button>
             <h4 id="zad2Code"></h4>
         </div>
 
         <div style="margin: 10px;">
-            
+
             <label>Odszyfrowanie</label>
-            <input type="text" id="inputOdszZad2" placeholder="wiadomosc"/>
-            <input type="text" id="numberNOdszZad2" placeholder="Klucz( z myślnikami )"/>
+            <input type="text" id="inputOdszZad2" placeholder="wiadomosc" />
+            <input type="text" id="numberNOdszZad2" placeholder="Klucz( z myślnikami )" />
             <button onclick="zad2Odszyfrowanie()">Odszyfruj</button>
             <h4 id="zad2Result"></h4>
 
         </div>
     </div>
 
-    <hr/>
-    <h3>ZAD 3  kryptosystem przedstawieniowy bazuj ˛acy na przykładzie 2b</h3>
+    <hr />
+    <h3>ZAD 3 kryptosystem przedstawieniowy bazuj ˛acy na przykładzie 2b</h3>
     <div style="display: flex; align-items: stretch;">
         <div style="margin: 10px;">
             <label>Szyfrowanie</label>
-            <input type="text" id="inputZad3" placeholder="wiadomosc"/>
-            <input type="text" id="numberNZad3" placeholder="kod"/>
+            <input type="text" id="inputZad3" placeholder="wiadomosc" />
+            <input type="text" id="numberNZad3" placeholder="kod" />
             <button onclick="zad3Kodowanie()">Szyfruj</button>
             <h4 id="zad3Code"></h4>
         </div>
 
         <div style="margin: 10px;">
             <label>Odszyfrowanie</label>
-            <input type="text" id="inputOdszZad3" placeholder="wiadomosc"/>
-            <input type="text" id="numberNOdszZad3" placeholder="kod"/>
-            <button onclick="zad32Odszyfrowanie()">Odszyfruj</button>
+            <input type="text" id="inputOdszZad3" placeholder="wiadomosc" />
+            <input type="text" id="numberNOdszZad3" placeholder="kod" />
+            <button onclick="zad3Odszyfrowanie()">Odszyfruj</button>
             <h4 id="zad3Result"></h4>
 
         </div>
     </div>
 
-    <hr/>
-    <h3>ZAD 3.2  bazuj ˛acy na przykładzie 2c</h3>
+    <hr />
+    <h3>ZAD 3.2 bazuj ˛acy na przykładzie 2c</h3>
     <div style="display: flex; align-items: stretch;">
         <div style="margin: 10px;">
             <label>Szyfrowanie</label>
-            <input type="text" id="inputZad32" placeholder="wiadomosc"/>
-            <input type="text" id="numberNZad32" placeholder="kod"/>
+            <input type="text" id="inputZad32" placeholder="wiadomosc" />
+            <input type="text" id="numberNZad32" placeholder="kod" />
             <button onclick="zad32Kodowanie()">Szyfruj</button>
             <h4 id="zad32Code"></h4>
         </div>
 
         <div style="margin: 10px;">
             <label>Odszyfrowanie</label>
-            <input type="text" id="inputOdszZad32" placeholder="wiadomosc"/>
-            <input type="text" id="numberNOdszZad32" placeholder="kod"/>
+            <input type="text" id="inputOdszZad32" placeholder="wiadomosc" />
+            <input type="text" id="numberNOdszZad32" placeholder="kod" />
             <button onclick="zad32Odszyfrowanie()">Odszyfruj</button>
             <h4 id="zad32Result"></h4>
         </div>
     </div>
 
-    <hr/>
+    <hr />
     <h3>ZAD 4 szyfr cezara</h3>
     <div style="display: flex; align-items: stretch;">
         <div style="margin: 10px;">
             <label>Szyfrowanie</label>
-            <input type="text" id="inputZad4" placeholder="wiadomosc"/>
-            <input type="number" id="numberNZad4" placeholder="K1"/>
-            <input type="number" id="number2NZad4" placeholder="K2"/>
+            <input type="text" id="inputZad4" placeholder="wiadomosc" />
+            <input type="number" id="numberNZad4" placeholder="K1" />
+            <input type="number" id="number2NZad4" placeholder="K2" />
             <button onclick="zad4Kodowanie()">Szyfruj</button>
             <h4 id="zad4Code"></h4>
         </div>
 
         <div style="margin: 10px;">
             <label>Odszyfrowanie</label>
-            <input type="text" id="inputOdszZad4" placeholder="wiadomosc"/>
-            <input type="number" id="numberNOdszZad4" placeholder="K1"/>
-            <input type="number" id="number2NOdszZad4" placeholder="K2"/>
+            <input type="text" id="inputOdszZad4" placeholder="wiadomosc" />
+            <input type="number" id="numberNOdszZad4" placeholder="K1" />
+            <input type="number" id="number2NOdszZad4" placeholder="K2" />
             <button onclick="zad4Odszyfrowanie()">Odszyfruj</button>
             <h4 id="zad4Result"></h4>
 
         </div>
     </div>
 
-    <hr/>
+    <hr />
     <h3>ZAD 5 kryptosystem bazuj ˛acy na tablicy Vigenere’a</h3>
     <div style="display: flex; align-items: stretch;">
         <div style="margin: 10px;">
             <label>Szyfrowanie</label>
-            <input type="text" id="inputZad5" placeholder="wiadomosc"/>
-            <input type="text" id="numberNZad5" placeholder="Key"/>
+            <input type="text" id="inputZad5" placeholder="wiadomosc" />
+            <input type="text" id="numberNZad5" placeholder="Key" />
             <button onclick="zad5Kodowanie()">Szyfruj</button>
             <h4 id="zad5Code"></h4>
         </div>
 
         <div style="margin: 10px;">
             <label>Odszyfrowanie</label>
-            <input type="text" id="inputOdszZad5" placeholder="wiadomosc"/>
-            <input type="text" id="numberNOdszZad5" placeholder="Key"/>
+            <input type="text" id="inputOdszZad5" placeholder="wiadomosc" />
+            <input type="text" id="numberNOdszZad5" placeholder="Key" />
             <button onclick="zad5Odszyfrowanie()">Odszyfruj</button>
             <h4 id="zad5Result"></h4>
 
         </div>
     </div>
-    
+
 
     <script type="text/javascript" src="zad5.js"></script>
-    <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="zad2.js"></script>
+    <script type="text/javascript" src="index.js"></script>
     <script type="text/javascript" src="zad3.js"></script>
     <script type="text/javascript" src="zad32.js"></script>
     <script type="text/javascript" src="zad4.js"></script>
-    
-   
+
+
 </body>
 
 </html>
