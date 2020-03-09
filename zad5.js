@@ -1,4 +1,4 @@
-let alphabet = "abcdefghijklmnoprstuwyz";
+let alphabet = "abcdefghijklmnoprstuwyz_";
 let alphabetTable = alphabet.split('');
 const literkaNaPozycji = function(literaKod,literaWiadomosc){
     let pozycjaLiterkiKodu;
@@ -26,9 +26,16 @@ const zad5Kodowanie = function(){
     let KOD="";
 
     if(Klucz.length != slowo.length){
-        KOD="klucz i slowo maja rozna dlugosc!1"
-        document.getElementById("zad5Code").innerHTML = KOD
-        return;
+        let tmp="";
+        let licznik = -1;
+        for(let i=0; i<slowo.length; i++){
+            licznik++;
+            tmp+=Klucz[licznik];
+
+            if(licznik==Klucz.length-1)
+                licznik=-1;
+        }
+        Klucz=tmp;
     }
         
 
@@ -48,9 +55,16 @@ const zad5Odszyfrowanie = function(){
     let WYNIK = ""
 
     if(Klucz.length != slowo.length){
-        WYNIK="klucz i slowo maja rozna dlugosc!1"
-        document.getElementById("zad5Result").innerHTML = WYNIK;
-        return;
+        let tmp="";
+        let licznik = -1;
+        for(let i=0; i<slowo.length; i++){
+            licznik++;
+            tmp+=Klucz[licznik];
+
+            if(licznik==Klucz.lenght-1)
+                licznik=-1;
+        }
+        Klucz=tmp;
     }
 
     for(let i=0 ; i < dlugosc ; i++){
