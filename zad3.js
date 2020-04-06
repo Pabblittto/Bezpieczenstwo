@@ -1,16 +1,16 @@
-let zad3alphabet = 'abcdefghijklmnoprstuwyz';
+let zad3alphabet = 'abcdefghijklmnopqrstuvwyz';
 let zad3alphatetInArray = zad3alphabet.split('');
 
 function tworzenieKluczaLiczbowego(klucz){// funkcja zwraca tablice z kolejnymi wartościamiklucza
     let kluczInArray = klucz.toLowerCase().split('');
     let kluczLiczbowy = new Array(klucz.length);
-    let liczba=1;
+    let liczba=0;
     for(let i=0;i<zad3alphabet.length;i++){
         for(let j=0;j<klucz.length;j++){
             if(kluczInArray[j]==zad3alphatetInArray[i])//if letters are the same put liczba in array
             {
-                kluczLiczbowy[j]=liczba;
                 liczba++;
+                kluczLiczbowy[j]=liczba;
             }
         }
     }
